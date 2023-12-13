@@ -1,4 +1,4 @@
-package com.santimattius.kmp.compose.skeleton
+package com.santimattius.kmp.skeleton
 
 import App
 import android.os.Bundle
@@ -10,7 +10,6 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             App()
         }
