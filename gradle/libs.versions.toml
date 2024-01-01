@@ -3,12 +3,12 @@ agp = "8.2.0"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
-androidx-activityCompose = "1.8.1"
+androidx-activityCompose = "1.8.2"
 androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
 androidx-core-ktx = "1.12.0"
 androidx-espresso-core = "3.5.1"
-androidx-material = "1.10.0"
+androidx-material = "1.11.0"
 androidx-test-junit = "1.1.5"
 compose = "1.5.4"
 compose-compiler = "1.5.5"
@@ -17,8 +17,7 @@ junit = "4.13.2"
 kotlin = "1.9.21"
 
 voyager = "1.0.0-rc10"
-coil-compose = "2.5.0"
-image-loader = "1.6.4"
+coil= "3.0.0-alpha01"
 
 koin = "3.5.0"
 koinCompose = "1.1.0"
@@ -46,8 +45,8 @@ compose-material = { module = "androidx.compose.material:material", version.ref 
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
 
-coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
-image-loader = { group = "io.github.qdsfdhvh", name = "image-loader", version.ref = "image-loader" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network = { module = "io.coil-kt.coil3:coil-network", version.ref = "coil" }
 
 koin-core = {module="io.insert-koin:koin-core", version.ref="koin"}
 koin-compose = {module="io.insert-koin:koin-compose", version.ref="koinCompose"}
