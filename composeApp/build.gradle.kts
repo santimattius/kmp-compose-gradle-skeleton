@@ -37,7 +37,7 @@ kotlin {
             api(libs.androidx.appcompat)
             api(libs.androidx.core.ktx)
 
-            implementation(libs.coil.compose)
+
 
             implementation(libs.ktor.client.okhttp)
             implementation(libs.kotlinx.coroutines.android)
@@ -53,6 +53,9 @@ kotlin {
                 implementation(compose.ui)
                 @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                implementation(libs.coil.compose)
+                implementation(libs.coil.network)
 
                 implementation(libs.voyager.navigator)
                 implementation(libs.voyager.koin)
@@ -78,7 +81,6 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
-                implementation(libs.image.loader)
                 implementation(libs.ktor.client.darwin)
             }
         }
