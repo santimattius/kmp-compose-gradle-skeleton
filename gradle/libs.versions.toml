@@ -15,7 +15,7 @@ compose-plugin = "1.6.2"
 junit = "4.13.2"
 kotlin = "1.9.23"
 
-statelyCommon = "2.0.5"
+statelyCommon = "2.0.7"
 voyager = "1.0.0"
 coil= "3.0.0-alpha06"
 
