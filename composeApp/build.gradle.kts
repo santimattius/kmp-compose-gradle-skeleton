@@ -51,12 +51,12 @@ kotlin {
                 implementation(compose.material)
                 implementation(compose.material3)
                 implementation(compose.ui)
-                @OptIn(ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
 
                 implementation(libs.coil.compose)
                 implementation(libs.coil.network)
 
+                implementation(libs.stately.common)
                 implementation(libs.voyager.navigator)
                 implementation(libs.voyager.koin)
 

@@ -8,7 +8,9 @@ import org.koin.compose.KoinApplication
 
 @Composable
 fun MainApplication() {
-    KoinApplication(moduleList = { applicationModules() }) {
+    KoinApplication(application = {
+        modules(applicationModules() )
+    }) {
         Navigator(SplashScreen)
     }
 }

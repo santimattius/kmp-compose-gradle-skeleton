@@ -28,7 +28,7 @@ class HomeScreenModel(
     }
 
     fun randomImage() {
-        mutableState.update { it.copy(isLoading = true) }
+        mutableState.update { it.copy(isLoading = true, hasError = false) }
         screenModelScope.launch(exceptionHandler) {
             repository.random().onSuccess { picture ->
                 mutableState.update { it.copy(isLoading = false, data = picture) }
