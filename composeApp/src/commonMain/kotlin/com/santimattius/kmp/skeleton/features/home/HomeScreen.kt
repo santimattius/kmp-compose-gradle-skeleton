@@ -14,34 +14,26 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.koin.getScreenModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.santimattius.kmp.skeleton.core.ui.components.AppBar
 import com.santimattius.kmp.skeleton.core.ui.components.ErrorView
 import com.santimattius.kmp.skeleton.core.ui.components.LoadingIndicator
 import com.santimattius.kmp.skeleton.core.ui.components.NetworkImage
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
-object HomeScreen : Screen {
-
-    @Composable
-    override fun Content() {
-        val screenModel = getScreenModel<HomeScreenModel>()
-        HomeScreenContent(screenModel)
-    }
-}
-
+@OptIn(KoinExperimentalAPI::class)
 @Composable
-fun HomeScreenContent(
-    screenModel: HomeScreenModel,
+fun HomeScreen(
+    screenModel: HomeViewModel = koinViewModel<HomeViewModel>(),
 ) {
-    val state by screenModel.state.collectAsState()
+    val state by screenModel.state.collectAsStateWithLifecycle()
     Scaffold(
         topBar = { AppBar(title = "Compose Skeleton") },
         floatingActionButtonPosition = FabPosition.Center,

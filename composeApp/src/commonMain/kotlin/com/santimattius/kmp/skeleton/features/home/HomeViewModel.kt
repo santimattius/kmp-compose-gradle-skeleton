@@ -1,10 +1,12 @@
 package com.santimattius.kmp.skeleton.features.home
 
-import cafe.adriel.voyager.core.model.StateScreenModel
-import cafe.adriel.voyager.core.model.screenModelScope
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.santimattius.kmp.skeleton.core.data.PictureRepository
 import com.santimattius.kmp.skeleton.core.domain.Picture
 import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
@@ -15,12 +17,15 @@ data class HomeUiState(
     val data: Picture? = null,
 )
 
-class HomeScreenModel(
+class HomeViewModel(
     private val repository: PictureRepository,
-) : StateScreenModel<HomeUiState>(HomeUiState()) {
+) : ViewModel() {
+
+    private val _state = MutableStateFlow(HomeUiState())
+    val state: StateFlow<HomeUiState> = _state
 
     private val exceptionHandler = CoroutineExceptionHandler { _, _ ->
-        mutableState.update { it.copy(isLoading = false, hasError = true) }
+        _state.update { it.copy(isLoading = false, hasError = true) }
     }
 
     init {
@@ -28,12 +33,12 @@ class HomeScreenModel(
     }
 
     fun randomImage() {
-        mutableState.update { it.copy(isLoading = true, hasError = false) }
-        screenModelScope.launch(exceptionHandler) {
+        _state.update { it.copy(isLoading = true, hasError = false) }
+        viewModelScope.launch(exceptionHandler) {
             repository.random().onSuccess { picture ->
-                mutableState.update { it.copy(isLoading = false, data = picture) }
+                _state.update { it.copy(isLoading = false, data = picture) }
             }.onFailure {
-                mutableState.update { it.copy(isLoading = false, hasError = true) }
+                _state.update { it.copy(isLoading = false, hasError = true) }
             }
         }
     }

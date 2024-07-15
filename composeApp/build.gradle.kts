@@ -56,9 +56,9 @@ kotlin {
             implementation(libs.coil.compose)
             implementation(libs.coil.network)
 
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.navigation.compose)
             implementation(libs.stately.common)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.koin)
 
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
@@ -68,6 +68,7 @@ kotlin {
 
             api(libs.koin.core)
             api(libs.koin.compose)
+            api(libs.koin.composeViewModel)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
