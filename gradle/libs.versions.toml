@@ -19,7 +19,7 @@ androidx-lifecycle = "2.8.0"
 statelyCommon = "2.0.7"
 coil= "3.0.0-alpha08"
 
-koin = "3.6.0-alpha3"
+koin = "3.6.0-wasm-alpha2"
 koinComposeMultiplatform = "1.2.0-Beta4"
 
 kotlinxCoroutinesAndroid = "1.8.1"
