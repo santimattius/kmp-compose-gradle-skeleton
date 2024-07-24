@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.navigation
+package com.santimattius.kmp.compose.navigation
 
 import kotlinx.serialization.Serializable
 

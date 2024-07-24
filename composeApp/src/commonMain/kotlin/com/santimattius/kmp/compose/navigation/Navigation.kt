@@ -1,12 +1,12 @@
-package com.santimattius.kmp.skeleton.navigation
+package com.santimattius.kmp.compose.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.santimattius.kmp.skeleton.features.home.HomeScreen
-import com.santimattius.kmp.skeleton.features.splash.SplashScreen
+import com.santimattius.kmp.compose.features.home.HomeScreen
+import com.santimattius.kmp.compose.features.splash.SplashScreen
 
 @Composable
 fun Navigation(

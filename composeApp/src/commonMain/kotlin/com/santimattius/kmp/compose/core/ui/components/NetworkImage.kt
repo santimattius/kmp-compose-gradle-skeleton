@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.core.ui.components
+package com.santimattius.kmp.compose.core.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size

@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton
+package com.santimattius.kmp.compose
 
 import App
 import android.app.Activity

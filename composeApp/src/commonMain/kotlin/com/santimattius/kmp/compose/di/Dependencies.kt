@@ -1,8 +1,8 @@
-package com.santimattius.kmp.skeleton.di
+package com.santimattius.kmp.compose.di
 
-import com.santimattius.kmp.skeleton.core.data.PictureRepository
-import com.santimattius.kmp.skeleton.core.network.ktorHttpClient
-import com.santimattius.kmp.skeleton.features.home.HomeViewModel
+import com.santimattius.kmp.compose.core.data.PictureRepository
+import com.santimattius.kmp.compose.core.network.ktorHttpClient
+import com.santimattius.kmp.compose.features.home.HomeViewModel
 import org.koin.compose.viewmodel.dsl.viewModelOf
 import org.koin.core.qualifier.qualifier
 import org.koin.dsl.module

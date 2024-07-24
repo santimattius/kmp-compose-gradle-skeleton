@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.features.home
+package com.santimattius.kmp.compose.features.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,10 +21,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.santimattius.kmp.skeleton.core.ui.components.AppBar
-import com.santimattius.kmp.skeleton.core.ui.components.ErrorView
-import com.santimattius.kmp.skeleton.core.ui.components.LoadingIndicator
-import com.santimattius.kmp.skeleton.core.ui.components.NetworkImage
+import com.santimattius.kmp.compose.core.ui.components.AppBar
+import com.santimattius.kmp.compose.core.ui.components.ErrorView
+import com.santimattius.kmp.compose.core.ui.components.LoadingIndicator
+import com.santimattius.kmp.compose.core.ui.components.NetworkImage
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
 

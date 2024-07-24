@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.features.splash
+package com.santimattius.kmp.compose.features.splash
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring

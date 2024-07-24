@@ -3,8 +3,8 @@ import coil3.ImageLoader
 import coil3.annotation.ExperimentalCoilApi
 import coil3.compose.setSingletonImageLoaderFactory
 import coil3.network.ktor.KtorNetworkFetcherFactory
-import com.santimattius.kmp.skeleton.MainApplication
-import com.santimattius.kmp.skeleton.core.ui.themes.AppTheme
+import com.santimattius.kmp.compose.MainApplication
+import com.santimattius.kmp.compose.core.ui.themes.AppTheme
 
 @OptIn(ExperimentalCoilApi::class)
 @Composable

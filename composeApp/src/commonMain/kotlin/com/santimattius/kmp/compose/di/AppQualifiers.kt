@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.di
+package com.santimattius.kmp.compose.di
 
 enum class AppQualifiers {
     Client,

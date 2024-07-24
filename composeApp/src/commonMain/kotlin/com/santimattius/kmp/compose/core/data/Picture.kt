@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.core.data
+package com.santimattius.kmp.compose.core.data
 
 
 import kotlinx.serialization.SerialName

@@ -1,4 +1,4 @@
-package com.santimattius.kmp.skeleton.core.domain
+package com.santimattius.kmp.compose.core.domain
 
 data class Picture(
     val id: String,

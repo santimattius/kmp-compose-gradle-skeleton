@@ -1,9 +1,9 @@
-package com.santimattius.kmp.skeleton.features.home
+package com.santimattius.kmp.compose.features.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.santimattius.kmp.skeleton.core.data.PictureRepository
-import com.santimattius.kmp.skeleton.core.domain.Picture
+import com.santimattius.kmp.compose.core.data.PictureRepository
+import com.santimattius.kmp.compose.core.domain.Picture
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

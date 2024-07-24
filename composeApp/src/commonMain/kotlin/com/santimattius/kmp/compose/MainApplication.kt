@@ -1,8 +1,8 @@
-package com.santimattius.kmp.skeleton
+package com.santimattius.kmp.compose
 
 import androidx.compose.runtime.Composable
-import com.santimattius.kmp.skeleton.di.applicationModules
-import com.santimattius.kmp.skeleton.navigation.Navigation
+import com.santimattius.kmp.compose.di.applicationModules
+import com.santimattius.kmp.compose.navigation.Navigation
 import org.koin.compose.KoinApplication
 
 @Composable
