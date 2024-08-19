@@ -26,9 +26,7 @@ import com.santimattius.kmp.compose.core.ui.components.ErrorView
 import com.santimattius.kmp.compose.core.ui.components.LoadingIndicator
 import com.santimattius.kmp.compose.core.ui.components.NetworkImage
 import org.koin.compose.viewmodel.koinViewModel
-import org.koin.core.annotation.KoinExperimentalAPI
 
-@OptIn(KoinExperimentalAPI::class)
 @Composable
 fun HomeScreen(
     screenModel: HomeViewModel = koinViewModel<HomeViewModel>(),
