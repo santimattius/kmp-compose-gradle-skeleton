@@ -21,7 +21,7 @@ coil= "3.0.0-alpha08"
 
 koin = "4.0.0-RC2"
 
-kotlinxCoroutinesAndroid = "1.8.1"
+kotlinxCoroutinesAndroid = "1.9.0"
 ktorVersion = "2.3.12"
 
 [libraries]
