@@ -19,7 +19,7 @@ androidx-lifecycle = "2.8.2"
 statelyCommon = "2.1.0"
 coil= "3.0.0-alpha08"
 
-koin = "4.0.0-RC2"
+koin = "4.0.0"
 
 kotlinxCoroutinesAndroid = "1.9.0"
 ktorVersion = "2.3.12"
