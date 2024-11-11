@@ -13,7 +13,7 @@ androidx-core-ktx = "1.13.1"
 compose = "1.7.5"
 compose-plugin = "1.7.0"
 
-androidx-navigation = "2.8.0-alpha08"
+androidx-navigation = "2.8.0-dev1905"
 androidx-lifecycle = "2.8.3"
 
 statelyCommon = "2.1.0"
