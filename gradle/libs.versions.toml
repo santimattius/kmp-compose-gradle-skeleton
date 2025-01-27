@@ -11,7 +11,7 @@ androidx-appcompat = "1.7.0"
 androidx-core-ktx = "1.15.0"
 
 compose = "1.7.6"
-compose-plugin = "1.7.1"
+compose-plugin = "1.8.0+dev2019"
 
 androidx-navigation = "2.8.0-alpha08"
 androidx-lifecycle = "2.8.4"
