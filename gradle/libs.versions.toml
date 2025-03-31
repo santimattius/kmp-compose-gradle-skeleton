@@ -22,7 +22,7 @@ coil= "3.1.0"
 koin = "4.0.4"
 
 kotlinxCoroutinesAndroid = "1.10.1"
-ktorVersion = "3.1.1"
+ktorVersion = "3.1.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
