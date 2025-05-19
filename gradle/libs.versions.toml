@@ -17,7 +17,7 @@ androidx-navigation = "2.8.0-alpha11"
 androidx-lifecycle = "2.8.4"
 
 statelyCommon = "2.1.0"
-coil= "3.1.0"
+coil= "3.2.0"
 
 koin = "4.0.4"
 
