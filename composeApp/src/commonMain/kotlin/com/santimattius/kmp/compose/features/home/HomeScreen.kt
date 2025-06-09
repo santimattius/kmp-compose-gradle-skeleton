@@ -29,14 +29,14 @@ import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun HomeScreen(
-    screenModel: HomeViewModel = koinViewModel<HomeViewModel>(),
+    viewModel: HomeViewModel = koinViewModel<HomeViewModel>(),
 ) {
-    val state by screenModel.state.collectAsStateWithLifecycle()
+    val state by viewModel.state.collectAsStateWithLifecycle()
     Scaffold(
         topBar = { AppBar(title = "Compose Skeleton") },
         floatingActionButtonPosition = FabPosition.Center,
         floatingActionButton = {
-            FloatingActionButton(onClick = { screenModel.randomImage() }) {
+            FloatingActionButton(onClick = { viewModel.randomImage() }) {
                 Icon(Icons.Default.Refresh, contentDescription = null)
             }
         }

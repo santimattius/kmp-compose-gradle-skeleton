@@ -11,9 +11,9 @@ androidx-appcompat = "1.7.1"
 androidx-core-ktx = "1.16.0"
 
 compose = "1.8.2"
-compose-plugin = "1.7.3"
+compose-plugin = "1.8.1"
 
-androidx-navigation = "2.8.0-alpha11"
+androidx-navigation = "2.9.0-beta01"
 androidx-lifecycle = "2.9.0"
 
 statelyCommon = "2.1.0"
@@ -32,6 +32,7 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 
 androidx-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose= { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 stately-common = { module = "co.touchlab:stately-common", version.ref = "statelyCommon" }
 
