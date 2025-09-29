@@ -14,7 +14,7 @@ compose = "1.9.1"
 compose-plugin = "1.9.0"
 
 androidx-navigation = "2.9.0"
-androidx-lifecycle = "2.9.4"
+androidx-lifecycle = "2.10.0+dev2995"
 
 statelyCommon = "2.1.0"
 coil= "3.3.0"
