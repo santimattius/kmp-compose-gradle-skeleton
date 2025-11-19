@@ -68,6 +68,8 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kotlinx.coroutines.core)
 
+            implementation("io.github.santimattius:kvs:1.0.0-ALPHA03")
+
             api(libs.koin.core)
             api(libs.koin.compose)
             api(libs.koin.composeViewModel)
