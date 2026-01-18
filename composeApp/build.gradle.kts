@@ -71,7 +71,9 @@ kotlin {
             api(libs.koin.core)
             api(libs.koin.compose)
             api(libs.koin.composeViewModel)
+
             implementation(libs.resilient)
+            implementation(libs.kvs)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)

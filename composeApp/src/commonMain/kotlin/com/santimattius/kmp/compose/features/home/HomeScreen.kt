@@ -7,11 +7,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bedtime
+import androidx.compose.material.icons.filled.BedtimeOff
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Card
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,6 +28,7 @@ import com.santimattius.kmp.compose.core.ui.components.AppBar
 import com.santimattius.kmp.compose.core.ui.components.ErrorView
 import com.santimattius.kmp.compose.core.ui.components.LoadingIndicator
 import com.santimattius.kmp.compose.core.ui.components.NetworkImage
+import com.santimattius.kmp.compose.core.ui.themes.AppTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -32,11 +36,37 @@ fun HomeScreen(
     viewModel: HomeViewModel = koinViewModel<HomeViewModel>(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    AppTheme(
+        darkTheme = state.isDarkMode
+    ) {
+        HomeContent(
+            state = state,
+            onRefresh = viewModel::randomImage,
+            onDarkMode = viewModel::darkMode
+        )
+    }
+}
+
+@Composable
+private fun HomeContent(
+    state: HomeUiState,
+    onRefresh: () -> Unit,
+    onDarkMode: () -> Unit,
+) {
     Scaffold(
-        topBar = { AppBar(title = "Compose Skeleton") },
+        topBar = {
+            AppBar(title = "Compose Skeleton", actions = {
+                IconButton(onClick = onDarkMode) {
+                    Icon(
+                        if (state.isDarkMode) Icons.Default.BedtimeOff else Icons.Default.Bedtime,
+                        contentDescription = null
+                    )
+                }
+            })
+        },
         floatingActionButtonPosition = FabPosition.Center,
         floatingActionButton = {
-            FloatingActionButton(onClick = { viewModel.randomImage() }) {
+            FloatingActionButton(onClick = onRefresh) {
                 Icon(Icons.Default.Refresh, contentDescription = null)
             }
         }
@@ -55,7 +85,7 @@ fun HomeScreen(
                 else -> {
                     Card(modifier = Modifier.padding(start = 16.dp, end = 16.dp)) {
                         NetworkImage(
-                            imageUrl = state.data!!.url,
+                            imageUrl = state.data.url,
                             contentDescription = "Image",
                             contentScale = ContentScale.Crop,
                             modifier = Modifier
