@@ -16,6 +16,7 @@ compose-plugin = "1.10.0"
 androidx-navigation = "2.9.1"
 androidx-lifecycle = "2.9.6"
 
+kvs = "1.2.0"
 resilient = "1.0.0"
 statelyCommon = "2.1.0"
 coil= "3.3.0"
@@ -54,6 +55,7 @@ ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "kto
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
 
+kvs = { module = "io.github.santimattius:kvs", version.ref = "kvs" }
 resilient = { module = "io.github.santimattius.resilient:resilient", version.ref = "resilient" }
 
 
