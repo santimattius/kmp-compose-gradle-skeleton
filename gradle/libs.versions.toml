@@ -1,28 +1,29 @@
 [versions]
-agp = "8.12.1"
-kotlin = "2.2.10"
+agp = "8.13.2"
+kotlin = "2.3.0"
 
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
 
-androidx-activityCompose = "1.10.1"
+androidx-activityCompose = "1.12.2"
 androidx-appcompat = "1.7.1"
 androidx-core-ktx = "1.17.0"
 
-compose = "1.9.0"
-compose-plugin = "1.8.2"
+compose = "1.10.1"
+compose-plugin = "1.10.0"
 
-androidx-navigation = "2.9.0-beta05"
-androidx-lifecycle = "2.9.2"
+androidx-navigation = "2.9.1"
+androidx-lifecycle = "2.9.6"
 
+resilient = "1.0.0"
 statelyCommon = "2.1.0"
 coil= "3.3.0"
 
-koin = "4.1.0"
+koin = "4.1.1"
 
 kotlinxCoroutinesAndroid = "1.10.2"
-ktorVersion = "3.2.3"
+ktorVersion = "3.3.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
@@ -52,6 +53,9 @@ ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVer
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorVersion" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
+
+resilient = { module = "io.github.santimattius.resilient:resilient", version.ref = "resilient" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
