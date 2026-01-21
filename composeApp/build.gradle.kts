@@ -2,18 +2,36 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidKotlinMultiplatformLibrary)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinSerialization)
 }
 
+compose.resources {
+    publicResClass = true
+    packageOfResClass = "kmp_compose_gradle_skeleton.composeapp.generated.resources"
+    generateResClass = always
+}
+
 kotlin {
 
     applyDefaultHierarchyTemplate()
-    androidTarget {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
+    
+    androidLibrary {
+        namespace = "com.santimattius.kmp.compose.shared"
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        
+        // Enable Android resources packaging (official way)
+        androidResources {
+            enable = true
+        }
+        
+        withHostTestBuilder {
+        }
+        
+        withDeviceTestBuilder {
         }
     }
 
@@ -29,7 +47,6 @@ kotlin {
     }
 
     sourceSets {
-
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
@@ -37,8 +54,6 @@ kotlin {
             api(libs.androidx.activity.compose)
             api(libs.androidx.appcompat)
             api(libs.androidx.core.ktx)
-
-
 
             implementation(libs.ktor.client.okhttp)
             implementation(libs.kotlinx.coroutines.android)
@@ -82,43 +97,5 @@ kotlin {
 }
 
 composeCompiler {
-    enableStrongSkippingMode = true
+    featureFlags = setOf()
 }
-
-val appId: String by project.extra
-
-
-android {
-    namespace = "com.santimattius.kmp.compose"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
-
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    sourceSets["main"].res.srcDirs("src/androidMain/res")
-    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
-
-    defaultConfig {
-        applicationId = appId
-        minSdk = libs.versions.android.minSdk.get().toInt()
-        targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    dependencies {
-        debugImplementation(libs.compose.ui.tooling)
-    }
-}
-
