@@ -1,6 +1,6 @@
 [versions]
-agp = "9.0.0"
-kotlin = "2.3.0"
+agp = "9.0.1"
+kotlin = "2.3.10"
 
 android-compileSdk = "36"
 android-minSdk = "24"
@@ -11,9 +11,9 @@ androidx-appcompat = "1.7.1"
 androidx-core-ktx = "1.17.0"
 
 compose = "1.10.3"
-compose-plugin = "1.10.0"
+compose-plugin = "1.10.1"
 
-androidx-navigation = "2.9.1"
+androidx-navigation = "2.9.2"
 androidx-lifecycle = "2.9.6"
 
 kvs = "1.2.0"
