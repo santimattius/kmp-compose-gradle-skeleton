@@ -19,7 +19,7 @@ androidx-lifecycle = "2.9.6"
 kvs = "1.2.0"
 resilient = "1.2.0"
 statelyCommon = "2.1.0"
-coil= "3.3.0"
+coil= "3.4.0"
 
 koin = "4.1.1"
 
