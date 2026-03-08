@@ -11,6 +11,8 @@ import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
+import io.github.santimattius.persistent.cache.installPersistentCache
+import io.github.santimattius.persistent.cache.CacheConfig
 
 internal fun ktorHttpClient(baseUrl: String) = HttpClient {
 
@@ -25,6 +27,15 @@ internal fun ktorHttpClient(baseUrl: String) = HttpClient {
         logger = Logger.DEFAULT
         level = LogLevel.ALL
     }
+
+    installPersistentCache(
+        config = CacheConfig(
+            enabled = true,
+            cacheDirectory = "http_cache",
+            maxCacheSize = 10L * 1024 * 1024, // 10 MB
+            cacheTtl = 60 * 60 * 1000,       // 1 hour
+        )
+    )
 
     defaultRequest {
         url(baseUrl)
