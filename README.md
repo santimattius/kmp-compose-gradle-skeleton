@@ -1,58 +1,77 @@
 # KMP Compose Gradle Skeleton
 
-This is a Kotlin Multiplatform project targeting Android, iOS.
+A modern, production-ready skeleton for **Kotlin Multiplatform (KMP)** development, featuring **Compose Multiplatform** for shared UI across Android and iOS. 
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-    - `commonMain` is for code that’s common for all targets.
-    - Other folders are for Kotlin code that will be compiled for only the platform indicated in the
-      folder name.
-      For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-      `iosMain` would be the right folder for such calls.
+This project implements the latest industry standards, including **AGP 9.1.0**, **Kotlin 2.3.10**, and the new **Android Kotlin Multiplatform Library** plugin structure.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for
-  your project.
+## 🚀 Project Overview
 
-## Prepare the environment
+This repository provides a modular architecture designed for maximum code sharing without compromising platform-specific capabilities.
 
-- Install and configure the latest JDK 17+.
-- If you have Gradle installed, make sure you use Gradle 8.1 or later.
-- Install and configure the latest Android Studio for Android samples.
-- Install and configure the latest Xcode for iOS samples.
+### Module Structure
 
-Use the [KDoctor](https://github.com/Kotlin/kdoctor) tool to ensure that your development
-environment is configured correctly:
+| Module | Purpose | Plugin / Type |
+| :--- | :--- | :--- |
+| **`:composeApp`** | Shared business logic, UI (Compose), and resources. | `com.android.kotlin.multiplatform.library` |
+| **`:androidApp`** | Android-specific entry point and configuration. | `com.android.application` |
+| **`iosApp`** | Xcode project for the iOS application. | Swift / SwiftUI |
 
-1. Install KDoctor with [Homebrew](https://brew.sh/):
+- **`commonMain`**: Shared UI components, ViewModels, and logic.
+- **`androidMain` / `iosMain`**: Platform-specific implementations for APIs like Ktor engines or local storage.
 
-    ```text
-    brew install kdoctor
-    ```
+## 🛠 Tech Stack
 
-2. Run KDoctor in your terminal:
+- **UI Framework**: [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/) (1.10.4)
+- **Dependency Injection**: [Koin](https://insert-koin.io/) (4.1.1)
+- **Networking**: [Ktor](https://ktor.io/) (3.4.1)
+- **Image Loading**: [Coil 3](https://coil-kt.github.io/coil/) (Multiplatform support)
+- **Navigation**: [Compose Navigation](https://developer.android.com/jetpack/compose/navigation) (Multiplatform)
+- **Resources**: [Compose Multiplatform Resources](https://www.jetbrains.com/help/kotlin-multiplatform-dev/compose-multiplatform-resources-usage.html)
+- **Build System**: Gradle 9.4.0 with Version Catalogs (`libs.versions.toml`)
 
-    ```text
-    kdoctor
-    ```
+## 📋 Prerequisites
 
-   If everything is set up correctly, you'll see valid output:
+Ensure your development environment meets the following requirements:
 
-   ```text
-   Environment diagnose (to see all details, use -v option):
-   [✓] Operation System
-   [✓] Java
-   [✓] Android Studio
-   [✓] Xcode
-   [✓] Cocoapods
-   
-   Conclusion:
-     ✓ Your system is ready for Kotlin Multiplatform Mobile development!
-   ```
+- **JDK**: 17 or higher (Required by AGP 9.0+)
+- **Android Studio**: Latest version (Ladybug or newer recommended for AGP 9 compatibility)
+- **Xcode**: 15.0+ (for iOS development)
+- **Cocoapods**: Required for iOS framework integration.
 
-Otherwise, KDoctor will highlight which parts of your setup still need to be configured and will
-suggest a way to fix
-them.
+### Environment Validation
+Use [KDoctor](https://github.com/Kotlin/kdoctor) to ensure everything is configured correctly:
+```bash
+brew install kdoctor
+kdoctor
+```
 
-Learn more
-about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/santimattius/kmp-compose-gradle-skeleton.git
+cd kmp-compose-gradle-skeleton
+```
+
+### 2. Android Execution
+Open the project in Android Studio. Select the `androidApp` run configuration and click **Run**.
+
+Alternatively, via CLI:
+```bash
+./gradlew :androidApp:installDebug
+```
+
+### 3. iOS Execution
+- **Via Android Studio**: Use the [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) to run the `iosApp` configuration directly.
+- **Via Xcode**: Open `iosApp/iosApp.xcodeproj`, select your target device/simulator, and press **Cmd + R**.
+
+## 🏗 Key Features
+
+- **Type-Safe Resources**: Shared strings, drawables, and fonts via Compose Resources.
+- **Unified Dependency Management**: Centralized `libs.versions.toml` for consistent versions across modules.
+- **Modern AGP Integration**: Utilizes the new modular DSL for Android Multiplatform libraries.
+- **MVI/MVVM Ready**: Architectural patterns supported by shared ViewModels and Lifecycle-aware components.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

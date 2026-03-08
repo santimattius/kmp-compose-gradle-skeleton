@@ -18,7 +18,7 @@ kotlin {
 
     applyDefaultHierarchyTemplate()
     
-    androidLibrary {
+    android {
         namespace = "com.santimattius.kmp.compose.shared"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -48,7 +48,8 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
-            implementation(libs.compose.ui.tooling.preview)
+            implementation(project.dependencies.platform(libs.androidx.compose.bom))
+            implementation(libs.androidx.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
 
             api(libs.androidx.activity.compose)
@@ -61,13 +62,13 @@ kotlin {
             implementation(libs.koin.android)
         }
         commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.material3)
-            implementation(compose.materialIconsExtended)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
+            implementation(libs.jetbrains.runtime)
+            implementation(libs.jetbrains.foundation)
+            implementation(libs.jetbrains.material)
+            implementation(libs.jetbrains.material3)
+            implementation(libs.jetbrains.material.icons.extended)
+            implementation(libs.jetbrains.ui)
+            implementation(libs.jetbrains.components.resources)
 
             implementation(libs.coil.compose)
             implementation(libs.coil.network)
@@ -81,7 +82,7 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.client.logging)
             implementation(libs.ktor.serialization.kotlinx.json)
-            implementation("io.github.santimattius:ktor-persistent-cache:1.0.0-ALPHA02")
+            implementation(libs.ktor.persistent.cache)
             implementation(libs.kotlinx.coroutines.core)
 
             api(libs.koin.core)
