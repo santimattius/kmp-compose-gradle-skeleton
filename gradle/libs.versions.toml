@@ -10,7 +10,7 @@ android-targetSdk = "36"
 
 androidx-activityCompose = "1.12.4"
 androidx-appcompat = "1.7.1"
-androidx-core-ktx = "1.17.0"
+androidx-core-ktx = "1.18.0"
 
 composeBom = "2026.02.01"
 compose = "1.10.4"
