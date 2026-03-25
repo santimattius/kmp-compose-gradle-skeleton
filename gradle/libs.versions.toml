@@ -1,7 +1,7 @@
 [versions]
 agp = "9.1.0"
 componentsResources = "1.10.2"
-foundation = "1.10.2"
+foundation = "1.10.3"
 kotlin = "2.3.20"
 
 android-compileSdk = "36"
