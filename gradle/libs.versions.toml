@@ -29,7 +29,7 @@ runtime = "1.10.3"
 statelyCommon = "2.1.0"
 coil = "3.4.0"
 
-koin = "4.1.1"
+koin = "4.2.0"
 
 kotlinxCoroutinesAndroid = "1.10.2"
 ktorVersion = "3.4.1"
