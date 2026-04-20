@@ -19,7 +19,7 @@ compose-plugin = "1.10.3"
 androidx-navigation = "2.9.2"
 androidx-lifecycle = "2.10.0"
 
-ktorPersistentCache = "1.0.0"
+ktorPersistentCache = "1.0.1"
 kvs = "1.2.0"
 material = "1.10.2"
 material3 = "1.9.0"
