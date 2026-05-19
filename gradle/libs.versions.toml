@@ -12,7 +12,7 @@ androidx-activityCompose = "1.13.0"
 androidx-appcompat = "1.7.1"
 androidx-core-ktx = "1.18.0"
 
-composeBom = "2026.03.01"
+composeBom = "2026.04.01"
 compose = "1.10.4"
 compose-plugin = "1.10.3"
 
