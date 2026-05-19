@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import com.santimattius.kmp.compose.features.home.HomeScreen
 import com.santimattius.kmp.compose.features.splash.SplashScreen
 
+@Suppress("ParamsComparedByRef")
 @Composable
 fun Navigation(
     navController: NavHostController = rememberNavController()
