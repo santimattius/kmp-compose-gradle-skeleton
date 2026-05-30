@@ -31,7 +31,7 @@ coil = "3.4.0"
 
 koin = "4.2.1"
 
-kotlinxCoroutinesAndroid = "1.10.2"
+kotlinxCoroutinesAndroid = "1.11.0"
 ktorVersion = "3.4.3"
 ui = "1.11.0"
 
