@@ -32,7 +32,7 @@ coil = "3.5.0"
 koin = "4.2.2"
 
 kotlinxCoroutinesAndroid = "1.11.0"
-ktorVersion = "3.5.0"
+ktorVersion = "3.5.1"
 ui = "1.11.1"
 
 [libraries]
