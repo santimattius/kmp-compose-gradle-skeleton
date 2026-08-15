@@ -12,7 +12,7 @@ androidx-core-ktx = "1.19.0"
 
 composeBom = "2026.05.01"
 compose = "1.10.4"
-compose-plugin = "1.10.3"
+compose-plugin = "1.11.1"
 componentsResources = "1.11.1"
 foundation = "1.11.1"
 
