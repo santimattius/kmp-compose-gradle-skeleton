@@ -33,7 +33,7 @@ koin = "4.2.2"
 
 kotlinxCoroutinesAndroid = "1.11.0"
 ktorVersion = "3.5.2"
-ui = "1.11.1"
+ui = "1.12.0"
 
 [libraries]
 #Jetpack Compose
